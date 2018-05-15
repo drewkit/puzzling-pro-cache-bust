@@ -1,7 +1,10 @@
 - name: randomly modify foo.txt, invalidating image layer cache
   type: serial
   steps:
-    - command: ./maybe-effect-foo-file.sh
+    
+    - name: modify foo?
+      command: ./modify-foo.sh
       service: service-a
-    - command: true
+    - name: build service b
+      command: true
       service: service-b

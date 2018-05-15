@@ -1,4 +1,4 @@
-- name: for odd numbered build id, effect a change that will cause cache to invalidate in spite of no git changes to file
+- name: randomly modify foo.txt, invalidating image layer cache
   type: serial
   steps:
     - command: ./maybe-effect-foo-file.sh

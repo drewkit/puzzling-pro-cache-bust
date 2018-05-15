@@ -1,0 +1,12 @@
+service-a:
+  build:
+    dockerfile: Dockerfile.a
+    image: dkcodeship/puzzling-cache-bust-a
+  volumes:
+    ./:/app
+
+service-b:
+  build:
+    dockerfile: Dockerfile.b
+    image: dkcodeship/puzzling-cache-bust-b
+  cached: true

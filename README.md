@@ -12,3 +12,10 @@
 - command step #2 calls for service B
 - service B is built, Dockerfile copying in modified file from command step #1
 - In spite of no recorded git changes for file, Docker image layer cache busts since modification is now detected with file
+
+
+#### Running via `jet steps`
+
+```
+jet steps --ci-commit-message='bust cache'
+```

@@ -1,7 +1,7 @@
 - name: for odd numbered build id, effect a change that will cause cache to invalidate in spite of no git changes to file
   type: serial
   steps:
-    - command: ./maybe-effect-file.sh
+    - command: ./maybe-effect-foo-file.sh
       service: service-a
     - command: true
       service: service-b

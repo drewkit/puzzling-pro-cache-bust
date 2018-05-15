@@ -3,7 +3,7 @@ service-a:
     dockerfile: Dockerfile.a
     image: dkcodeship/puzzling-cache-bust-a
   volumes:
-    ./:/app
+    - ./:/app
 
 service-b:
   build:

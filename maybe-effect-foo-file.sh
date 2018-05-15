@@ -1,8 +1,8 @@
 #!/bin/bash
 
 set -e
-
-if [ $(echo $(( $( echo $RANDOM ) % 2 )) ) -gt "0" ]
+echo $CI_COMMIT_MESSAGE
+if [[ $CI_COMMIT_MESSGAGE =~ bust ]]
 then
   echo 'altering foo.txt file? ---> YES'
   echo $RANDOM >> foo.txt

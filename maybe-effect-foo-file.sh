@@ -1,8 +1,8 @@
 #!/bin/bash
 
 set -e
-echo $CI_COMMIT_MESSAGE
-if [[ $CI_COMMIT_MESSGAGE =~ bust ]]
+
+if [[ 'bust cache' == $CI_COMMIT_MESSAGE ]]
 then
   echo 'altering foo.txt file? ---> YES'
   echo $RANDOM >> foo.txt
